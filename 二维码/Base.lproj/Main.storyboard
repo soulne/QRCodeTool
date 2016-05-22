@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4fY-Co-kZb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l5j-x6-zq4">
+                                <rect key="frame" x="135" y="269" width="105" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAr-fe-7Gq">
+                                        <rect key="frame" x="15" y="0.0" width="75" height="30"/>
+                                        <state key="normal" title="生成二维码"/>
+                                        <connections>
+                                            <segue destination="ZUE-kc-9Sd" kind="show" id="aLD-Wo-ahm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6W-X2-nDx">
+                                        <rect key="frame" x="0.0" y="50" width="105" height="30"/>
+                                        <state key="normal" title="读取图片二维码"/>
+                                        <connections>
+                                            <segue destination="RMv-FP-L5n" kind="show" id="HTg-7Z-nhY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBL-a8-aQh">
+                                        <rect key="frame" x="15" y="100" width="75" height="30"/>
+                                        <state key="normal" title="二维码扫描"/>
+                                        <connections>
+                                            <segue destination="K3L-TL-Oge" kind="show" id="pW8-eI-OjM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l5j-x6-zq4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PZd-oW-Kex"/>
+                            <constraint firstItem="l5j-x6-zq4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gXo-2D-Cum"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ng9-Lo-lcu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655.5" y="-305.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XSj-NA-wh9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4fY-Co-kZb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OFH-8q-NsM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DW9-Cc-Ohe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oo7-uz-MHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="-305"/>
+        </scene>
+        <!--Detector-->
+        <scene sceneID="1CT-tZ-ju7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detector" id="RMv-FP-L5n" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lus-cD-xI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.5" y="-323"/>
+        </scene>
+        <!--Generator-->
+        <scene sceneID="QnA-x2-0GD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Generator" id="ZUE-kc-9Sd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6YJ-5y-FfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041.5" y="-392"/>
+        </scene>
+        <!--Scan-->
+        <scene sceneID="ibJ-AQ-KQI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Scan" id="K3L-TL-Oge" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNV-Yf-b1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="-256"/>
+        </scene>
+    </scenes>
+</document>
