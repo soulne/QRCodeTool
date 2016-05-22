@@ -265,7 +265,7 @@ class MyQRCodeTool: NSObject {
 // 工具类封装注意
 // 如果是私有方法, 直接放到一个类扩展里面, 不要直接和需要暴露给外界的接口写到一块,
 // 如果是私有方法, 不要直接暴露给外界使用(外界使用)
-extension QRCodeTool {
+extension MyQRCodeTool {
     
     
     // 根据一个二维码特征, 绘制边框到二维码上面, 并且生成一个新的图片
@@ -378,7 +378,7 @@ extension QRCodeTool {
             //            }
             
             var point = CGPointZero
-            CGPointMakeWithDictionaryRepresentation(corner as! CFDictionary, &point)
+            CGPointMakeWithDictionaryRepresentation((corner as! CFDictionary), &point)
             
             
             // 如果第一个点, 移动路径过去, 当做起点
@@ -426,7 +426,7 @@ extension QRCodeTool {
 }
 
 
-extension QRCodeTool: AVCaptureMetadataOutputObjectsDelegate {
+extension MyQRCodeTool: AVCaptureMetadataOutputObjectsDelegate {
     
     // 扫描到结果, 调用这个方法, 来告诉我们识别的结果
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {

@@ -52,6 +52,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="backView" destination="Ka5-uB-Ftp" id="0qs-Hz-Ifo"/>
                         <outlet property="scanCons" destination="MPd-aa-TJM" id="ACP-Fx-QhV"/>
                         <outlet property="scanLine" destination="Caa-nF-1TZ" id="hWh-bf-O9b"/>
                     </connections>

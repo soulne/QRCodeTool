@@ -54,7 +54,12 @@ class GeneratorViewController: UIViewController {
 //        CGContextDrawImage(bitmapRef, extent, bitmapImage);
         // 2.保存bitmap到图片 let scaledImage: CGImageRef = CGBitmapContextCreateImage(bitmapRef)! return UIImage(CGImage: scaledImage) }
         
-    
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+        
+    }
+
     
 }
